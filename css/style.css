@@ -1,50 +1,40 @@
-*{
+/*
+Color hex codes:
+#ffeead light yellow
+#ffcc5c dark yellow
+#96ceb4 light seablue
+#ff6f69 salmon pink
+#f9ccac light pink
+#3b3a30 grey black
+#d5f4e6 light blue
+#80ced6 medium blue
+*/
+
+
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: whitesmoke;
-}
-
-.header {
-/*    background-color: pink; */
-    background-image: url(../images/beach-pano.JPG);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    font-family: sans-serif;
-    color: darkslategray;
-    padding: 20px 10px;
-    height:250px;
-    letter-spacing: 2px;
-}
-
-.header-2 {
-    background-color: cadetblue; 
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    font-family: sans-serif;
-    color: darkslategray;
-    padding: 20px 10px;
-    height:250px;
-    letter-spacing: 2px;
-
-}
-
-.container{
-    width:100%;
-    min-height: 800px;
-    margin: auto;
-    margin-bottom: 0;
-    background-color: blanchedalmond
+    height: 200vh;
+    background-color: #ffcc5c;
 }
 
 #navbar {
-    background-color:antiquewhite;
-    padding: 20px;
-    text-align: right
+    background-color: #ffcc5c;
+    opacity: 1;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    position: sticky;
+    top:0;
+    box-sizing: border-box; 
+    padding:15px;
+    /* 
+    border:transparent solid;
+    border-bottom-color:gray;
+    */
 }
 
 #navbar a {
@@ -53,76 +43,105 @@ body {
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
+    margin-left: 8px;
 }
 
 .button:hover{
-    background-color: white;
+    background-color: #ffeead;
     border-radius: 5px;
+    padding: 3px;
 }
 
+.button:active{
+    background-color: #ff6f69;
+    border-radius: 5px;
+    padding: 3px;
+}
 
-.button {
+.button{
     background-color: transparent;
-    padding: 5px;
-    margin-left: 10px;
+    border-radius: 5px;
+    padding: 3px;
 }
 
-#header-title {
-    background-color: white;
-    opacity:0.8;
-    vertical-align: middle;
-    min-height: 40%;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    margin-top:40px;
-    padding-top:40px;
-    padding-left:30px;
-    padding-right:30px;
-    padding-bottom:20px;
-    font-size:4em;
-}
-
-.container p {
+#box-1 {
+    background-color:#f9ccac;
+    height: 400px;
     font-family: sans-serif;
-    padding: 20px;
-    margin-top: 30px;
-    font-size: 1.2em;
-    color: dimgray;
+    text-align: center;
+}
+
+#box-1 p {
+    padding: 150px 0;
+    font-size:4em;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.section {
+    background-color: #ffeead;
+    padding-top:60px;
+    padding-bottom:60px;
+    padding-right:60px;
+    padding-left:60px;
+    margin-top:10px;
+    /* border: black solid; */
+    overflow: auto;
+}
+
+h2 {
+    font-family: sans-serif;
+    color: #3b3a30;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: sans-serif;
     line-height: 1.5;
 }
 
 
-footer {
-    margin:0;
-    background-color: lightblue;
-    text-align: right;
-    height:100%;
-    padding:10px;
-    font-family:sans-serif;
+.end-space {
+    padding-top: 200px;
 }
 
-#headshot {
-    margin: 10px;
-    border: dotted cadetblue;
+#my-photo {
     float:left;
-    padding:10px;
-    width: 220px;
-    box-sizing: border-box; 
+    width: 160px; 
+    height: 160px;
+    border-radius: 50%;
+    border: solid ;
+    margin-right: 60px;
+    margin-left: 40px;
 }
 
-#about-text {
-    margin: 10px;
-    float:left;
-    width: 580px;
-    box-sizing: border-box; 
+#projects p {
+    margin-bottom:10px;
 }
 
-#royce-hall {
-    margin: 10px;
-    border: dotted cadetblue;
-    float:left;
+
+#skills p:hover{
+    background-color: #80ced6;
+}
+
+#skills p {
+    float: left;
+    background-color: #d5f4e6;
+    margin-right:20px;
     padding:10px;
-    width: 295px;
-    box-sizing: border-box; 
+    border: #80ced6 solid;
+}
+
+#resume a, #projects a {
+    font-family: sans-serif;
+    color: #ff6f69;
+}
+
+#resume a:hover, #projects a:hover {
+    font-family: sans-serif;
+    color: white;
+    background-color: #ff6f69
 }
