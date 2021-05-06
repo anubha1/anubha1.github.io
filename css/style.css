@@ -18,11 +18,11 @@ Color hex codes:
 
 body {
     height: 300vh;
-    background-color: #ffcc5c;
+    background-color: #f9ccac;
 }
 
 #navbar {
-    background-color: #ffcc5c;
+    /*background-color: #ffcc5c;*/
     opacity: 1;
     height: 50px;
     width: 100%;
@@ -47,7 +47,7 @@ body {
 }
 
 .button:hover{
-    background-color: #ffeead;
+    background-color: #f9ccac;
     border-radius: 5px;
     padding: 3px;
 }
@@ -59,13 +59,15 @@ body {
 }
 
 .button{
-    background-color: transparent;
+    background-color: #ffeead;
     border-radius: 5px;
     padding: 3px;
+    transition-duration: 0.2s;
 }
 
 #box-1 {
-    background-color:#f9ccac;
+    /*background-color:#f9ccac;*/
+    background-image: linear-gradient(to bottom right,#ff6f69, #ffeead);
     height: 400px;
     font-family: sans-serif;
     text-align: center;
@@ -81,12 +83,11 @@ body {
 
 .section {
     background-color: #ffeead;
-    padding-top:60px;
-    padding-bottom:60px;
-    padding-right:60px;
-    padding-left:60px;
+    padding-top:50px;
+    padding-bottom:50px;
+    padding-right:50px;
+    padding-left:50px;
     margin-top:10px;
-    /* border: black solid; */
     overflow: auto;
 }
 
@@ -113,8 +114,8 @@ p {
     width: 160px; 
     height: 160px;
     border-radius: 50%;
-    border: solid ;
-    margin-right: 60px;
+    border: solid #ff6f69;
+    margin-right: 40px;
     margin-left: 40px;
 }
 
@@ -125,14 +126,16 @@ p {
 
 #skills p:hover{
     background-color: #80ced6;
+
 }
 
 #skills p {
     float: left;
     background-color: #d5f4e6;
     margin-right:20px;
-    padding:10px;
-    border: #80ced6 solid;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition-duration: 0.3s;
 }
 
 #resume a, #projects a {
