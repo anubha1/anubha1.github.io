@@ -1,0 +1,65 @@
+* {
+    font-family: sans-serif;
+}
+
+svg {
+    border: 1px black solid;
+    background-color: #b4b8c7;
+}
+
+mark {
+    background-color: #fdff8a;
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 110%;
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    background-color: #526bc5;
+    color:#ffffff;
+}
+
+select:hover {
+    background-color: #e7e7e7;
+    color: black;
+    cursor: pointer;
+}
+
+table, th, td {
+    border: solid 1px #454545;
+    border-collapse: collapse;
+    font-size: 95%;
+    text-align: center;
+    font-weight: normal;
+    padding: 3px;
+}
+
+th {
+    background-color: #b4b8c7;
+}
+
+thead tr th {
+    width: 70px;
+}
+
+thead tr th:first-child {
+    width: 180px;
+}
+
+tbody tr {
+    background-color: #efefef;
+}
+
+tbody tr:hover {
+    background-color: #8a8a8a;
+    color: #ffffff;
+}
+
+th:hover {
+    cursor: pointer;
+    color: #0034f0;
+    font-weight: bold;
+}

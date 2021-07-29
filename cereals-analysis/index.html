@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Comparing Breakfast Cereals</title>
+    <link rel="stylesheet" href="styles.css"></link>
+</head>
+<body>
+    <h1>Comparing Popular Breakfast Cereals</h1>
+    <div id="intro">
+        <h2>Introduction</h2>
+        <p>Many people reach for cereal in the morning because it is so convenient, tasty, filling, and nutritious. 
+            Wait a minute, nutritious? Although cereals 
+            often market themselves as the perfect, quick, tasty, and healthy breakfast, I have often wondered how 
+            nutritious they really are. In this article, I compare 16 common breakfast cereals. 
+            Some of these cereals are popular because of their sweetness, so it is no surprise that they do not meet certain nutrition recommendations. 
+            Still, it is useful to see a comparison of nutrients in each of these cereals so that we can be more aware of what 
+            we eat. Note that a typical breakfast might include milk, fruit, and more, in addition to the cereal. 
+            The data below shows only the nutrients gained from 1 serving of the cereal, not including milk. 
+        </p>
+        <p>
+            According to the U.S. FDA, certain nutrients should be consumed less, while others more. 
+            <mark>The nutrients to consume less of are Saturated Fat, Sodium, and Added Sugars. 
+            The nutrients to consume more of are Dietary Fiber, Vitamin D, Calcium, Iron, and Potassium.</mark> 
+            The % Daily Value on a label states how much of the recommended daily dosage of that nutrient is satisfied by eating one serving of the food.
+            For nutrients for which low intake is recommended, the % daily value in one serving of food should be below 5%.
+            For nutrients for which high intake is recommended, the % daily value should be above 20%.
+        </p>
+    </div>
+    <div id="dataviz">
+        <h2>Interactive Tables</h2>
+        <p>The table below states the percent daily value satisfied by eating 1 serving of selected American breakfast cereals. Use the dropdown menu to select a nutrient to examine.</p>
+        <label for="nutrition">Select a nutrition category:</label>
+        <select name="nutrition" id="nutrition" onchange="update()">
+            <option value="SatFat">Saturated Fat</option>
+            <option value="Cholesterol">Cholesterol</option>
+            <option value="Sodium">Sodium</option>
+            <option value="Fiber">Dietary Fiber</option>
+            <option value="AddSug">Added Sugars</option>
+            <option value="VitD">Vitamin D</option>
+            <option value="Calcium">Calcium</option>
+            <option value="Iron">Iron</option>
+            <option value="Potassium">Potassium</option>
+        </select>
+        <p id="recommendation-text"></p>
+        <svg id="svg1" width='750' height='550'></svg>
+        <br>
+        <p>The table below shows the nutrition data. Click on a column header to sort the column.</p>
+        <table id="table">
+            <thead><tr>
+                <th onclick="sortColumn('Name')">Cereal Name</th>
+                <th onclick="sortColumn('Serving')">Serving Size<br/>(grams)</th>
+                <th onclick="sortColumn('Calories')">Calories</th>
+                <th onclick="sortColumn('SatFat')">Saturated Fat<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('Cholesterol')">Cholesterol<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('Sodium')">Sodium<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('Fiber')">Dietary Fiber<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('AddSug')">Added Sugars<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('VitD')">Vitamin D<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('Calcium')">Calcium<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('Iron')">Iron<br/>(% Daily Value)</th>
+                <th onclick="sortColumn('Potassium')">Potassium<br/>(% Daily Value)</th>
+            </tr></thead>
+            <tbody id="tableData"></tbody>
+            
+        </table>
+    </div>
+    <div id="references">
+        <h2>References</h2>
+        <a href="https://www.fda.gov/food/new-nutrition-facts-label/how-understand-and-use-nutrition-facts-label">https://www.fda.gov/food/new-nutrition-facts-label/how-understand-and-use-nutrition-facts-label</a>
+        <br>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
