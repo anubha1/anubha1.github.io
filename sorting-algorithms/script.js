@@ -40,14 +40,25 @@ function displayArray(index) {
         d3.select(this).transition()
                .duration('50')
                .attr('opacity', '.5');
-        svg.append("text").text(d3.select(this).datum())
-        .attr("x", d3.select(this).attr("x"))
-        .attr("y", d3.select(this).attr("y"))
+//        svg.append("text").text(d3.select(this).datum())
+//        .attr("x", d3.select(this).attr("x"))
+//        .attr("y", d3.select(this).attr("y"))
     })
     .on("mouseout", function(d, i) {
         d3.select(this).transition()
         .duration('50').attr('opacity', '1');
     });
+    
+    svg.selectAll("text").data(arr).enter().append("text").text(function(d, i) {
+        return d;
+    }).attr("x", function(d, i) {
+        return 10 + 15 * i;
+    })
+    .attr("y", function(d, i) {
+        return 200 - arr[i] * scale - 10;
+    })
+    .style("font-size", "14px");
+    
     /*
     svg.append("line")
     .attr("x1", 8 + 15 * start)
